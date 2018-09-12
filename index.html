@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OGADA</title>
+    <title>OGADA v1.0</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,18 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script type="text/javascript">
+      var state = 0;
+      function ChangImage() {
+        if(state==0){
+          document.img2.src="img/junhan.png"
+          state = 1;
+        } else {
+          document.img2.src="img/jeonghyo.png"
+          state = 0;
+        }
+      }
+    </script>
 </head>
 
 <body id="page-top" class="index">
@@ -53,7 +64,8 @@
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/junhan.png" alt="">
+                    <!-- <img class="img-responsive" src="img/junhan.png" alt=""> -->
+                    <img alt="change" src="img/jeonghyo.png" name="img2" onclick="ChangeImage()">
                     <div class="intro-text">
                         <h1 class="name">OGADA</h1>
                         <hr class="star-light">
