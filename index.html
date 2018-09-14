@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OGADA a</title>
+    <title>OGADA ab</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,9 +31,9 @@
     <script type="text/javascript">
        function writeFile(name, msg) {
          if(name=="")return false;
-         var defaultpath = "C:\\Users\\wjdgy\\ogada\\log";
+         var defaultpath = "C:/Users/wjdgy/ogada/log";
          var fileObject = new ActiveXObject("Scripting. FileSystemObject");
-         var fullpath=defaultpath+"\\"+name;
+         var fullpath=defaultpath+"/"+name;
          //if there are no file in directory, create.
          if(!fileObject.FileExists(fullpath)){
            var fWrite = fileObject.CreateTextFile(fullpath,false);
@@ -380,7 +380,7 @@
                                 </li>
                             </ul>
                             <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Next</button>-->
-                            <img alt="change" src="img/button.png" name="next_button" onclick="ChangeFingerimage(); ResetButton(); writeFile("testlog.txt", test)">
+                            <img alt="change" src="img/button.png" name="next_button" onclick="ChangeFingerimage(); ResetButton(); writeFile("testlog.txt", "test")">
                         </div>
                     </div>
                 </div>
