@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OGADA</title>
+    <title>OGADA write</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +28,25 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+       function writeFile(name, msg) {
+         if(name=="")return false;
+         var defaultpath = "log";
+         var fileObject = new ActiveXObject("Scripting. FileSystemObject");
+         var fullpath=defaultpath+"\\"+name;
+         //if there are no file in directory, create.
+         if(!fileObject.FileExists(fullpath)){
+           var fWrite = fileObject.CreateTextFile(fullpath,false);
+           fWrite.write(msg);
+           fWrite.close();
+         } else{
+           //if there already exists file, open and append text.
+           var fWrite=fileObject.OpenTextFile(fullpath, 8);
+           fWrite.write(msg);
+           fWrite.close();
+         }
+      }
+    </script>
     <script type="text/javascript">
        var state = 0;
        function ChangeImage() {
@@ -340,7 +359,7 @@
                             <img src="img/0_0.png" class="img-responsive img-centered" alt="change" name="img2">
                             <p>How many fingers in this picture?</p>
                             <!--<p>0   1   2   3   4   5</p>-->
-                            <img src="img/0.png" class="buttonlink" alt="change" name="button0" onclick="ChangeButton0()">
+                            <img src="img/0.png" class="buttonlink" alt="change" name="button0" onclick="ChangeButton0(); writeFile(log, test)">
                             <img src="img/1.png" class="buttonlink" alt="change" name="button1" onclick="ChangeButton1()">
                             <img src="img/2.png" class="buttonlink" alt="change" name="button2" onclick="ChangeButton2()">
                             <img src="img/3.png" class="buttonlink" alt="change" name="button3" onclick="ChangeButton3()">
