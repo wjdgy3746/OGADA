@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OGADA a</title>
+    <title>OGADA ab</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -359,7 +359,7 @@
                             <img src="img/0_0.png" class="img-responsive img-centered" alt="change" name="img2">
                             <p>How many fingers in this picture?</p>
                             <!--<p>0   1   2   3   4   5</p>-->
-                            <img src="img/0.png" class="buttonlink" alt="change" name="button0" onclick="ChangeButton0(); writeFile(log, test)">
+                            <img src="img/0.png" class="buttonlink" alt="change" name="button0" onclick="ChangeButton0()">
                             <img src="img/1.png" class="buttonlink" alt="change" name="button1" onclick="ChangeButton1()">
                             <img src="img/2.png" class="buttonlink" alt="change" name="button2" onclick="ChangeButton2()">
                             <img src="img/3.png" class="buttonlink" alt="change" name="button3" onclick="ChangeButton3()">
@@ -380,7 +380,7 @@
                                 </li>
                             </ul>
                             <!--<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Next</button>-->
-                            <img alt="change" src="img/button.png" name="next_button" onclick="ChangeFingerimage(); ResetButton()">
+                            <img alt="change" src="img/button.png" name="next_button" onclick="ChangeFingerimage(); ResetButton(); writeFile("testlog", "test")">
                         </div>
                     </div>
                 </div>
